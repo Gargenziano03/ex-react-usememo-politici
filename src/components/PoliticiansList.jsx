@@ -3,7 +3,6 @@ import Card from './Card';
 
 export default function PoliticiansList() {
     const [politicians, setPoliticians] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     //Effettua una chiamata API
     useEffect(() => {
@@ -19,9 +18,6 @@ export default function PoliticiansList() {
             });
     }, []);
 
-    if (loading) {
-        return <div className="loading">Caricamento in corso...</div>;
-    }
     return (
         <>
             <h1>Lista Politici</h1>
