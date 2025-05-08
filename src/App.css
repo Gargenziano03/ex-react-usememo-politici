@@ -1,0 +1,120 @@
+/* Impostazioni globali */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Titolo */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Searchbar */
+.searchbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f2f2f2;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.searchbar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s ease;
+}
+
+.searchbar input:focus {
+  border-color: #0077cc;
+}
+
+/* Container flessibile e centrato */
+.politicians-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+/* Card del politico */
+.politician-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 280px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.politician-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Immagine */
+.politician-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+/* Testi */
+.politician-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.politician-card p {
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+}
+
+.politician-card p strong {
+  font-weight: 600;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 600px) {
+  .politician-card {
+    width: 90%;
+  }
+
+  .searchbar input {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  .loading {
+    font-size: 1rem;
+  }
+}
