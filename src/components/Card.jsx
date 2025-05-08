@@ -1,7 +1,10 @@
 import React from "react";
 
+// Applichiamo React.memo al componente Card
+const Card = React.memo(({ name, image, position, biography }) => {
+    // Console log per verificare il rendering
+    console.log(`Rendering card for ${name}`);
 
-export default function Card({ name, image, position, biography }) {
     return (
         <div className="politician-card">
             <img className="politician-image" src={image} alt={name} />
@@ -10,6 +13,6 @@ export default function Card({ name, image, position, biography }) {
             <p>{biography}</p>
         </div>
     );
-}
+});
 
-
+export default Card;
